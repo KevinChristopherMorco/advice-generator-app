@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+  /* Primary */
+
+  --Light-Cyan: hsl(193, 38%, 86%);
+  --Neon-Green: hsl(150, 100%, 66%);
+
+  /* Neutral */
+
+  --Grayish-Blue: hsl(217, 19%, 38%);
+  --Dark-Grayish-Blue: hsl(217, 19%, 24%);
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--Dark-Blue);
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: var(--Light-Cyan);
+}
+
+.attribution a {
+  color: var(--Neon-Green)
+}
+
+.main-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-advice-container {
+  width: 90%;
+  height: auto;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  background-color: var(--Dark-Grayish-Blue);
+  position: relative;
+}
+
+.main-advice-container .advice__number>p {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.3rem;
+  color: var(--Neon-Green);
+}
+
+.main-advice-container .advice__content>p {
+  padding: 2rem 0;
+  font-size: 1.75rem;
+  font-weight: 800;
+  text-align: center;
+  color: var(--Light-Cyan);
+}
+
+.main-advice-container .advice__dice-container {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 50%);
+  cursor: pointer;
+  background-color: var(--Neon-Green);
+}
+
+.main-advice-container .advice__dice-container .advice__dice {
+  content: url('../images/icon-dice.svg');
+  background-repeat: no-repeat;
+}
+
+.main-advice-container .advice__divider{
+  width: 100%;
+  height: 30px;
+  padding: 1.5rem 0;
+  background-image: url('../images/pattern-divider-mobile.svg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50%;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-advice-container {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main-advice-container {
+    width: 50%;
+  }
+
+  .main-advice-container .advice__divider{
+    background-image: url('../images/pattern-divider-desktop.svg');
+  }
+  
+}
+
+@media only screen and (min-width: 1920px) {
+  .main-advice-container {
+    width: 30%;
+  }
+
+  .main-advice-container .advice__divider{
+    background-image: url('../images/pattern-divider-desktop.svg');
+  }
+}
